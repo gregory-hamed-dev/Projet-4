@@ -651,9 +651,11 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: black!important;
 }
-
+blockquote > footer {
+    color: black;
+}
 .container {
     max-width: 1000px;
 }
@@ -677,7 +679,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
@@ -775,12 +777,12 @@ h4 {
 }
 
 .tc-white {
-    color: #f2d3c4!important;
+    color: #fff!important;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color:#393636!important;
 }
 
 .btn-atomic-tangerine:hover {
@@ -824,7 +826,7 @@ h4 {
 .bg-presentation {
     background-image: url("img/image-de-presentation.jpg");
 }
-
+ 
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
