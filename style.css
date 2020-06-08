@@ -99,9 +99,7 @@ a:hover {
     background-attachment: fixed;
 }
 
-.d-bloc {
-    color: rgba(255, 255, 255, .7);
-}
+
 
 .d-bloc button:hover {
     color: rgba(255, 255, 255, .9);
@@ -702,8 +700,13 @@ p {
 }
 
 .social {
-    max-width: 400px;
+    font-size: 1.1em;
     margin: auto auto auto auto;
+}
+#liste{
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-decoration: underline;
 }
 
 h2 {
@@ -738,7 +741,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    font-size: 1.2em;
 }
 
 .portfolio-thumb {
@@ -825,6 +828,12 @@ h4 {
 
 .bg-presentation {
     background-image: url("img/image-de-presentation.jpg");
+}
+
+/* icones réseaux sociaux du footer*/
+
+.fa{
+    margin-right: 15px;
 }
  
 @media (max-width: 1024px) {
@@ -1028,6 +1037,20 @@ h4 {
         width: 180px;
         height: 320px;
     }
+    .col-sm-3{
+        padding-bottom: 10px;
+    }
+
+    .col-sm-4{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul > li {
+    margin-top: 10px;
+    }
+    
 }
 
 @media (max-width: 400px) {
