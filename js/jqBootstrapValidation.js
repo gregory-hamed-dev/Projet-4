@@ -428,9 +428,9 @@
             }
           );
 
-          // =============================================================
-          //                                             WATCH FOR CHANGES
-          // =============================================================
+          /* =============================================================
+                                WATCH FOR CHANGES
+          =============================================================*/
           $this.bind(
             "submit.validation",
             function () {
@@ -470,18 +470,18 @@
 
               errorsFound = $.unique(errorsFound.sort());
 
-              // Were there any errors?
+              /* Were there any errors?*/
               if (errorsFound.length) {
                 // Better flag it up as a warning.
                 $controlGroup.removeClass("success error").addClass("warning");
 
-                // How many errors did we find?
+                /* How many errors did we find?*/
                 if (settings.options.semanticallyStrict && errorsFound.length === 1) {
-                  // Only one? Being strict? Just output it.
+                  /* Only one? Being strict? Just output it.*/
                   $helpBlock.html(errorsFound[0] + 
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
-                  // Multiple? Being sloppy? Glue them together into an UL.
+                  /*Multiple? Being sloppy? Glue them together into an UL.*/
                   $helpBlock.html("<ul class=\"list-unstyled alert alert-warning\" role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 }
@@ -513,17 +513,17 @@
               $controlGroup = $this.parents(".form-group, .checkbox").first(),
               $helpBlock = $controlGroup.find(".help-block").first();
 
-            // remove our events
+            /* remove our events*/
             $this.unbind('.validation'); // events are namespaced.
-            // reset help text
+            /* reset help text*/
             $helpBlock.html($helpBlock.data("original-contents"));
-            // reset classes
+            /* reset classes*/
             $controlGroup.attr("class", $controlGroup.data("original-classes"));
-            // reset aria
+            /* reset aria*/
             $this.attr("aria-invalid", $this.data("original-aria-invalid"));
-            // reset role
+            /* reset role*/
             $helpBlock.attr("role", $this.data("original-role"));
-						// remove all elements we created
+						/*remove all elements we created*/
 						if (createdElements.indexOf($helpBlock[0]) > -1) {
 							$helpBlock.remove();
 						}
@@ -605,10 +605,10 @@
                   }
                   rrjqbvValidator.lastFinished = true;
                   rrjqbvThis.data("validation" + rrjqbvValidator.validatorName + "Message", rrjqbvValidator.message);
-                  // Timeout is set to avoid problems with the events being considered 'already fired'
+                  /* Timeout is set to avoid problems with the events being considered 'already fired'*/
                   setTimeout(function () {
                     rrjqbvThis.trigger("change.validation");
-                  }, 1); // doesn't need a long timeout, just long enough for the event bubble to burst
+                  }, 1); /*doesn't need a long timeout, just long enough for the event bubble to burst*/
                 }
               }
             );
@@ -651,10 +651,10 @@
                   }
                   validator.lastFinished = true;
                   $this.data("validation" + validator.validatorName + "Message", validator.message);
-                  // Timeout is set to avoid problems with the events being considered 'already fired'
+                  /* Timeout is set to avoid problems with the events being considered 'already fired'*/
                   setTimeout(function () {
                     $this.trigger("change.validation");
-                  }, 1); // doesn't need a long timeout, just long enough for the event bubble to burst
+                  }, 1); /*doesn't need a long timeout, just long enough for the event bubble to burst*/
                 }
               },
               failure: function () {
@@ -662,10 +662,10 @@
                 validator.message = "ajax call failed";
                 validator.lastFinished = true;
                 $this.data("validation" + validator.validatorName + "Message", validator.message);
-                // Timeout is set to avoid problems with the events being considered 'already fired'
+                /*Timeout is set to avoid problems with the events being considered 'already fired'*/
                 setTimeout(function () {
                   $this.trigger("change.validation");
-                }, 1); // doesn't need a long timeout, just long enough for the event bubble to burst
+                }, 1); /*doesn't need a long timeout, just long enough for the event bubble to burst*/
               }
             });
           }

@@ -24,7 +24,7 @@ a:hover {
     bottom: 0;
     width: 100%;
     z-index: 100000;
-    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+    background: #FFFFFF;
 }
 
 .bloc {
@@ -771,10 +771,6 @@ h4 {
     background-color: #FFFFFF;
 }
 
-.bgc-dark-slate-blue {
-    background-color: #364577;
-}
-
 .bgc-atomic-tangerine {
     background-color: #F3976C;
 }
@@ -1064,4 +1060,10 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+    .img-responsive{
+        width: 270px!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    
 }
